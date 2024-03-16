@@ -1,0 +1,1 @@
+[![Build and test](https://github.com/svetlilaloli/Student-Registry/actions/workflows/integration-tests.yml/badge.svg)](https://github.com/svetlilaloli/Student-Registry/actions/workflows/integration-tests.yml)
