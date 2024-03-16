@@ -8,7 +8,18 @@ on:
   workflow_dispatch: 
 
 jobs:
-  build-test:
+  test-npm-security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Install packages
+        run: npm install
+      - name: Run npm security check
+        run : npm audit
+
+  test-integration:
+    needs: test-npm-security
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -17,3 +28,4 @@ jobs:
         run: npm install
       - name: Run tests
         run: npm test
+
